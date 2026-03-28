@@ -1,0 +1,30 @@
+{
+  "rows": 7043,
+  "columns": 21,
+  "churn_rate": 0.2653698707936959,
+  "missing_total_charges": 11,
+  "contract_churn_rate": {
+    "Month-to-month": 42.7,
+    "One year": 11.3,
+    "Two year": 2.8
+  },
+  "internet_churn_rate": {
+    "DSL": 19.0,
+    "Fiber optic": 41.9,
+    "No": 7.4
+  },
+  "payment_churn_rate": {
+    "Bank transfer (automatic)": 16.7,
+    "Credit card (automatic)": 15.2,
+    "Electronic check": 45.3,
+    "Mailed check": 19.1
+  },
+  "monthly_charge_by_churn": {
+    "No": 61.27,
+    "Yes": 74.44
+  },
+  "tenure_by_churn": {
+    "No": 37.57,
+    "Yes": 17.98
+  }
+}
