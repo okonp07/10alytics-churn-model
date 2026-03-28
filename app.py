@@ -376,10 +376,15 @@ def build_single_record_input(dataframe: pd.DataFrame) -> pd.DataFrame:
                     else:
                         is_integer = field == "tenure"
                         value = int(round(float(defaults[field]))) if is_integer else float(defaults[field])
+                        if field in {"tenure", "MonthlyCharges", "TotalCharges"}:
+                            min_value = 0 if is_integer else 0.0
+                        else:
+                            min_value = None
+
                         step = 1 if is_integer else 0.01
                         record[field] = st.number_input(
                             label,
-                            min_value=0 if field in {"tenure", "MonthlyCharges", "TotalCharges"} else None,
+                            min_value=min_value,
                             value=value,
                             step=step,
                             help=help_text,
